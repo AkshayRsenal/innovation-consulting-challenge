@@ -1,0 +1,17 @@
+.setWidth{
+    width: 100%;
+    overflow: hidden;
+}
+
+.margin_top{
+    margin-top: 76px;
+}
+
+.overlay-text {
+    font-size:3.5vw;
+    float:right;
+    width:65%; /*important*/
+    bottom:21vw; /*important*/
+    padding: 25px;
+    background:#f7f7f7;
+  }
