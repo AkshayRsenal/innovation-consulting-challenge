@@ -7,32 +7,34 @@ import { render } from '@testing-library/react';
 
 function LandingPage() {
     const [addHiddenClassName, setAddHiddenClassName] = React.useState(false);
-    let hiddenClassName;
-    let nextScrollUP = 1400
-    let nextScrollDown = 1400;
     let userHasScrolled;
 
     const setUserHasNotScrolled = () => {
-        setAddHiddenClassName(
-            true
-        );
+        const scrollPos = window.scrollY + window.innerHeight;
+        if (scrollPos > 1500){
+            setAddHiddenClassName(true);
+        }
     }
 
     window.onscroll = function (e) {
         userHasScrolled = true
-        console.log(e.returnValue);
         const scrollPos = window.scrollY + window.innerHeight;
-        setTimeout(setUserHasNotScrolled, 100);
-        if (scrollPos > 1500 && userHasScrolled) {
-            console.log(userHasScrolled);
+        console.log(scrollPos);
+        if (scrollPos > window.innerHeight)
+        {
+            setTimeout(setUserHasNotScrolled, 500);
+            if(userHasScrolled) {
+                setAddHiddenClassName(
+                    false
+                );
+            } else {
+                setAddHiddenClassName(
+                    true
+                );
+            }
+        }else {
             setAddHiddenClassName(
                 false
-            );
-        } else {
-            console.log(userHasScrolled);
-            hiddenClassName = "";
-            setAddHiddenClassName(
-                true
             );
         }
     }
@@ -113,9 +115,9 @@ function LandingPage() {
                 </div>
             </div>
             <div>
-                {(addHiddenClassName ? (<div className={"col-lg-12 col-md-12 button-margin text-center d-flex justify-content-center" + " " + hiddenClassName + addHiddenClassName}>
+                {(addHiddenClassName ? (<div className={"col-lg-12 col-md-12 button-margin text-center"}>
                     <button className="btn btn-success my-2 my-sm-0 button-float" >Meinen Preis Berechnen</button>
-                </div>) : (<div className={"col-lg-12 col-md-12 button-margin text-center d-flex justify-content-center" + " " + hiddenClassName + addHiddenClassName}>
+                </div>) : (<div className={"col-lg-12 col-md-12 button-margin text-center"}>
                 </div>))}
             </div>
         </div>
