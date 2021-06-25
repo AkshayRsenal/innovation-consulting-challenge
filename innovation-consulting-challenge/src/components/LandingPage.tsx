@@ -117,7 +117,7 @@ function LandingPage() {
             <div>
                 {(addHiddenClassName ? (<div className={"col-lg-12 col-md-12 button-margin text-center"}>
                     <button className="btn btn-success my-2 my-sm-0 button-float" >Meinen Preis Berechnen</button>
-                </div>) : (<div className={"col-lg-12 col-md-12 button-margin text-center"}>
+                </div>) : (<div className="col-lg-12 col-md-12 button-margin text-center">
                 </div>))}
             </div>
         </div>
