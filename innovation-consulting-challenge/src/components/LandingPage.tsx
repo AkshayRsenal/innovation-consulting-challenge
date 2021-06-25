@@ -7,50 +7,41 @@ import { render } from '@testing-library/react';
 
 function LandingPage() {
     const [addHiddenClassName, setAddHiddenClassName] = React.useState(false);
-
     let hiddenClassName;
     let nextScrollUP = 1400
     let nextScrollDown = 1400;
-    let onScroll = () => {
+    let userHasScrolled;
+
+    const setUserHasNotScrolled = () => {
+        setAddHiddenClassName(
+            true
+        );
+    }
+
+    window.onscroll = function (e) {
+        userHasScrolled = true
+        console.log(e.returnValue);
         const scrollPos = window.scrollY + window.innerHeight;
-        console.log(scrollPos)
-        if (scrollPos > 1500) {
-            if (scrollPos != nextScrollDown && scrollPos > 1500) {
-                hiddenClassName = "hidden-element";
-                console.log('finding')
-                setAddHiddenClassName(
-                    true
-                );
-            } else {
-                hiddenClassName = "";
-                console.log('lesses reaches')
-                setAddHiddenClassName(
-                    false
-                );
-            }
-
-            nextScrollUP = window.scrollY + window.innerHeight - 3;
-            nextScrollDown = window.scrollY + window.innerHeight + 3;
-
-        } else {
-            hiddenClassName = "";
-            console.log('notttttt reaches')
+        setTimeout(setUserHasNotScrolled, 100);
+        if (scrollPos > 1500 && userHasScrolled) {
+            console.log(userHasScrolled);
             setAddHiddenClassName(
                 false
             );
+        } else {
+            console.log(userHasScrolled);
+            hiddenClassName = "";
+            setAddHiddenClassName(
+                true
+            );
         }
-
     }
-
-    window.addEventListener("scroll", onScroll);
+    // window.addEventListener("scroll", onScroll);
 
     return (
-
         <div className="container-fluid">
-
             <div className="img-class">
                 <div className="container-fluid setWidth" >
-
                 </div>
                 <div className="overlay-text" >
                     <div className="col-md-12">
@@ -64,9 +55,7 @@ function LandingPage() {
                     </div>
                 </div>
             </div>
-            <div className="clearfix"></div>
-
-            <div className="section-two clearfix">
+            <div className="section-two">
                 <div className="container-fluid row">
                     <div className="col-lg-8 col-md-6 col-xs-12 section-two-margin" >
                         <div className="col-xs-12 col-sm-2 col-md-2 col-lg-2">
@@ -121,19 +110,14 @@ function LandingPage() {
                             <img src="https://via.placeholder.com/200x200" alt="logo" title="logo_title" />
                         </a>
                     </div>
-
                 </div>
-
             </div>
             <div>
                 {(addHiddenClassName ? (<div className={"col-lg-12 col-md-12 button-margin text-center d-flex justify-content-center" + " " + hiddenClassName + addHiddenClassName}>
                     <button className="btn btn-success my-2 my-sm-0 button-float" >Meinen Preis Berechnen</button>
                 </div>) : (<div className={"col-lg-12 col-md-12 button-margin text-center d-flex justify-content-center" + " " + hiddenClassName + addHiddenClassName}>
-
                 </div>))}
-
             </div>
-
         </div>
     )
 }
