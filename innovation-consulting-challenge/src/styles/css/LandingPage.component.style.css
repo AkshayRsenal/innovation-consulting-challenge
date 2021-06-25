@@ -1,17 +1,392 @@
-.setWidth{
+.setWidth {
     width: 100%;
     overflow: hidden;
+    background-image: url('../../static/images/hero_pizza.jpg');
+    /* background-image: element('/src/static/images/hero_pizza.jpg'); */
+    background-color: #cccccc;
+    /* Used if the image is unavailable */
+    height: 400px;
+    /* You must set a specified height */
+    background-position: top;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    background-color: black;
+    height: 888px;
 }
 
-.margin_top{
+.margins-top {
     margin-top: 76px;
 }
 
 .overlay-text {
-    font-size:3.5vw;
-    float:right;
-    width:65%; /*important*/
-    bottom:21vw; /*important*/
-    padding: 25px;
-    background:#f7f7f7;
-  }
+    font-size: 1.5vw;
+    width: 75%;
+    /*important*/
+    left: 12.3vw;
+    top: -12vw;
+    background: #ffffff;
+    position: relative;
+    text-align: center;
+    height: 23%;
+    z-index: 999999;
+    padding: 15px;
+}
+
+.img-class {
+    height: 888px;
+    /* You must set a specified height */
+    width: 100%;
+    text-align: center;
+}
+
+.large-text {
+    font-family: "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 3.3vw;
+    text-align: center;
+    color: #1E3282;
+}
+
+.medium-text {
+    font-family: "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1.3vw;
+    text-align: center;
+    color: #1E3282;
+    /* line-height: 1.5; */
+}
+
+.vertical-adjust {
+    transform: translate(-15, 10);
+    /* vertical-align: 4vh; */
+    text-align: center;
+    margin-top: -1%;
+}
+
+.text-xs {
+    font-size: 0.75rem !important;
+}
+
+.text-sm {
+    font-size: 0.875rem !important;
+}
+
+.text-md {
+    font-size: 1rem !important;
+}
+
+.text-lg {
+    font-size: 1.25rem !important;
+}
+
+.text-xl {
+    font-size: 2rem !important;
+}
+
+.button-float {
+    position: fixed;
+    height: 10vh;
+    left: 43vh;
+    top: 78vh;
+    width: 30%;
+    font-size: 22px;
+    box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
+    transition: top .3s;
+    z-index: 9999999;
+    text-align: center;
+}
+
+.hide {
+    top: -40px
+}
+
+
+/* section-two-margin */
+
+.text-center {
+    text-align: center;
+}
+
+.text-lightblue {
+    color: #86bad8 !important;
+}
+
+.text-navy {
+    color: #1E3282 !important;
+}
+
+.text-olive {
+    color: #74c8a3 !important;
+}
+
+.text-lime {
+    color: #67ffa9 !important;
+}
+
+.text-fuchsia {
+    color: #f672d8 !important;
+}
+
+.button-margin {
+    margin: 1em 0em;
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.justify-content-start {
+    -webkit-justify-content: flex-start !important;
+    -ms-flex-pack: start !important;
+    justify-content: flex-start !important;
+}
+
+.section-two {
+    background-color: #EBEFF9;
+    height: 400px;
+    width: 100%;
+}
+
+.section-two-margin {
+    background-color: #EBEFF9;
+    margin-top: 5%;
+    text-align: justify !important;
+}
+
+.section-three-margin {
+    margin-top: 5%;
+}
+
+.section-three {
+    background-color: #ffffff;
+    height: 400px;
+    width: 100%;
+}
+
+.section-four {
+    background-color: #EBEFF9;
+    height: 400px;
+    width: 100%;
+}
+
+.hidden-element {
+    display: none;
+}
+
+@media (min-width: 500px) {
+    #goto_top_button {
+        margin: 30px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+    .carousel-inner.set-slide-img-size .item {
+        height: 471px;
+        background-size: cover;
+        background-position: center center;
+    }
+    .carousel-inner.set-thumbnail-img-size .item {
+        height: 81px;
+        background-size: cover;
+        background-position: center center;
+    }
+    .carsale_overview_img_container {
+        height: 190px;
+        background-color: black;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .carousel-inner.set-slide-img-size .item {
+        height: 350px;
+        background-size: cover;
+        background-position: center center;
+    }
+    .carousel-inner.set-thumbnail-img-size .item {
+        height: 81px;
+        background-size: cover;
+        background-position: center center;
+    }
+    .caption-carousel-customize p {
+        font-family: inherit;
+        font-size: 62%;
+        color: white;
+    }
+    .carsale_overview_img_container {
+        height: 216px;
+        background-color: black;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .carousel-inner.set-slide-img-size .item {
+        height: 350px;
+        background-size: cover;
+        background-position: center center;
+    }
+    .carousel-inner.set-thumbnail-img-size .item {
+        height: 82px;
+        background-size: cover;
+        background-position: center center;
+    }
+    .customize-indicators-carousel li {
+        height: 3px;
+        width: 9px;
+    }
+    .fix-margin {
+        margin-left: -41px;
+        margin-right: -35px;
+    }
+    .imp-font-price {
+        font-size: 19px;
+    }
+    .padding-for-bs-grids {
+        padding-right: 3px;
+        padding-left: 3px;
+    }
+    .caption-carousel-customize p {
+        font-family: inherit;
+        font-size: 62%;
+        color: white;
+    }
+    .carsale_overview_img_container {
+        height: 214px;
+        background-color: black;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-width: 360px) and (device-height: 640px) {
+    .carousel-inner.set-slide-img-size .item {
+        height: 225px;
+        background-size: cover;
+        background-position: center center;
+    }
+    .carousel-inner.set-thumbnail-img-size .item {
+        height: 50px;
+        background-size: cover;
+        background-position: center center;
+    }
+    #thumbs-nav {
+        margin: 5px;
+    }
+    .customize-indicators-carousel li {
+        height: 3px;
+        width: 9px;
+    }
+    .padding-for-bs-grids {
+        padding-right: 3px;
+        padding-left: 3px;
+    }
+    .fix-margin {
+        margin-left: -48px;
+        margin-right: -20px;
+    }
+    .caption-carousel-customize p {
+        font-family: inherit;
+        font-size: 62%;
+        color: white;
+    }
+    .carsale_overview_img_container {
+        height: 178px;
+        background-color: black;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-width: 370px) and (max-width: 760px) {
+    .carousel-inner.set-slide-img-size .item {
+        height: 238px;
+        background-size: cover;
+        background-position: center center;
+    }
+    .carousel-inner.set-thumbnail-img-size .item {
+        height: 50px;
+        background-size: cover;
+        background-position: center center;
+    }
+    #thumbs-nav {
+        margin: 5px;
+    }
+    .customize-indicators-carousel li {
+        height: 3px;
+        width: 9px;
+    }
+    .padding-for-bs-grids {
+        padding-right: 3px;
+        padding-left: 3px;
+    }
+    .fix-margin {
+        margin-left: -48px;
+        margin-right: -20px;
+    }
+    .caption-carousel-customize p {
+        font-family: inherit;
+        font-size: 62%;
+        color: white;
+    }
+    .carsale_overview_img_container {
+        height: 188px;
+        background-color: black;
+        overflow: hidden;
+    }
+}
+
+
+/*@media (max-width: @screen-xs-max) {*/
+
+
+/*Iphone 5*/
+
+@media only screen and (min-width: 320px) and (device-height: 568px) {
+    .setWidth {
+        /* Used if the image is unavailable */
+        height: 200px;
+        /* You must set a specified height */
+        height: 250px;
+    }
+    .carousel-inner.set-slide-img-size .item {
+        height: 198px;
+        background-size: cover;
+        background-position: center center;
+    }
+    .carousel-inner.set-thumbnail-img-size .item {
+        height: 50px;
+        background-size: cover;
+        background-position: center center;
+    }
+    #thumbs-nav {
+        margin: 5px;
+    }
+    .padding-for-bs-grids {
+        padding-right: 3px;
+        padding-left: 3px;
+    }
+    .customize-indicators-carousel li {
+        height: 3px;
+        width: 9px;
+    }
+    .hide-overflow {
+        overflow: hidden;
+        margin: 0;
+    }
+    .fix-margin {
+        margin-left: -75px;
+        margin-right: -1px;
+    }
+    .caption-carousel-customize p {
+        font-family: inherit;
+        font-size: 62%;
+        color: white;
+    }
+    .carsale_overview_img_container {
+        height: 152px;
+        background-color: black;
+        overflow: hidden;
+    }
+}
