@@ -19,8 +19,8 @@ function LandingPage() {
     window.onscroll = function (e) {
         userHasScrolled = true
         const scrollPos = window.scrollY + window.innerHeight;
-        console.log(scrollPos);
-        if (scrollPos > window.innerHeight)
+        // console.log(scrollPos);
+        if (scrollPos > 1500)
         {
             setTimeout(setUserHasNotScrolled, 500);
             if(userHasScrolled) {
@@ -115,9 +115,9 @@ function LandingPage() {
                 </div>
             </div>
             <div>
-                {(addHiddenClassName ? (<div className={"col-lg-12 col-md-12 button-margin text-center"}>
+                {(addHiddenClassName ? (<div className={"col-lg-12 col-md-12 col-sm-12 col-xs-12 button-margin text-center"}>
                     <button className="btn btn-success my-2 my-sm-0 button-float" >Meinen Preis Berechnen</button>
-                </div>) : (<div className="col-lg-12 col-md-12 button-margin text-center">
+                </div>) : (<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 button-margin text-center">
                 </div>))}
             </div>
         </div>
