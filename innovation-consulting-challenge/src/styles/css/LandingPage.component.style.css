@@ -243,7 +243,8 @@
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+/* @media only screen and (min-width: 992px) and (max-width: 1200px) {
     .button-float {
         position: fixed;
         height: 10vh;
@@ -256,15 +257,15 @@
         z-index: 9999999;
         text-align: center;
     }
-}
+} */
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 765px) and (max-width: 1025px) {
     .button-float {
         position: fixed;
-        height: 10vw;
-        left: 30vw;
-        top: 122vw;
-        width: 40%;
+        height: 8vw;
+        left: 32vw;
+        top: 125vw;
+        width: 35%;
         font-size: 22px;
         box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
         transition: top .5s;
@@ -289,7 +290,7 @@
     }
 } */
 
-@media only screen and (min-width: 370px) and (max-width: 820px) {
+@media only screen and (min-width: 370px) and (max-width: 700px) {
     .button-float {
         position: fixed;
         height: 20vw;
@@ -310,6 +311,21 @@
         height: 20vw;
         left: 30vw;
         top: 155vw;
+        width: 40%;
+        font-size: 22px;
+        box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
+        transition: top .5s;
+        z-index: 9999999;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 530px) and (max-width: 750px) {
+    .button-float {
+        position: fixed;
+        height: 15vw;
+        left: 30vw;
+        top: 115vw;
         width: 40%;
         font-size: 22px;
         box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);

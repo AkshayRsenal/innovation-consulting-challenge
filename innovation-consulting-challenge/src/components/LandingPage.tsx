@@ -46,13 +46,13 @@ function LandingPage() {
                 <div className="container-fluid setWidth" >
                 </div>
                 <div className="overlay-text" >
-                    <div className="col-md-12">
+                    <div className="col-md-12 col-xs-12 col-lg-12 ">
                         <span className="large-text">Die Haftplichtversicherung für Berufseinsteiger</span>
                     </div>
                     <div className="vertical-adjust">
                         <span className="medium-text">Unbeschwert das Leben genießen</span>
                     </div>
-                    <div className="col-md-12 button-margin">
+                    <div className="col-md-12 col-xs-12 col-lg-12  button-margin">
                         <button className="btn btn-success my-2 my-sm-0 " >Meinen Preis Berechnen</button>
                     </div>
                 </div>
