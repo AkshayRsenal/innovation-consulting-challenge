@@ -19,18 +19,62 @@
     margin-top: 76px;
 }
 
+.section2-col {
+    text-align: center;
+}
+
+.section4-end {
+    margin-bottom: 3vw;
+}
+
+.section3-col {
+    text-align: center;
+    color: #1E3282;
+}
+
+.s2-col-title {
+    text-align: center;
+    font-size: 1.5em;
+    color: #1E3282;
+}
+
+.s3-col-title {
+    text-align: center;
+    font-size: 1.2em;
+    color: #1E3282;
+}
+
+.s2-col-content {
+    text-align: center;
+    color: #1E3282;
+}
+
+body>button {
+    color: #fff;
+    font-family: Sans-serif;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+}
+
+.button-margin {
+    font-size: 1.5em;
+}
+
+.button-element {
+    font-size: 1em;
+}
+
 .overlay-text {
-    font-size: 1.5vw;
     width: 75%;
-    /*important*/
     left: 12.3vw;
     top: -12vw;
     background: #ffffff;
     position: relative;
     text-align: center;
-    height: 23%;
-    z-index: 999999;
+    height: 25%;
+    z-index: 3;
     padding: 15px;
+    border-radius: .7em;
 }
 
 .img-class {
@@ -42,59 +86,42 @@
 
 .large-text {
     font-family: "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 3.3vw;
+    font-size: 3.0vw;
     text-align: center;
     color: #1E3282;
 }
 
 .medium-text {
     font-family: "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 1.3vw;
+    font-size: 2vw;
     text-align: center;
     color: #1E3282;
-    /* line-height: 1.5; */
 }
 
 .vertical-adjust {
-    transform: translate(-15, 10);
-    /* vertical-align: 4vh; */
     text-align: center;
     margin-top: -1%;
 }
 
 .text-xs {
-    font-size: 0.75rem !important;
+    font-size: 0.75rem;
 }
 
 .text-sm {
-    font-size: 0.875rem !important;
+    font-size: 0.875rem;
 }
 
 .text-md {
-    font-size: 1rem !important;
+    font-size: 1rem;
 }
 
 .text-lg {
-    font-size: 1.25rem !important;
+    font-size: 1.25rem;
 }
 
 .text-xl {
-    font-size: 2rem !important;
+    font-size: 2rem;
 }
-
-
-/* .button-float {
-    position: fixed;
-    height: 10vh;
-    left: 93vh;
-    top: 78vh;
-    width: 30%;
-    font-size: 22px;
-    box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
-    transition: top .5s;
-    z-index: 9999999;
-    text-align: center;
-} */
 
 .hide-me {
     top: -40px
@@ -108,23 +135,23 @@
 }
 
 .text-lightblue {
-    color: #86bad8 !important;
+    color: #86bad8;
 }
 
 .text-navy {
-    color: #1E3282 !important;
+    color: #1E3282;
 }
 
 .text-olive {
-    color: #74c8a3 !important;
+    color: #74c8a3;
 }
 
 .text-lime {
-    color: #67ffa9 !important;
+    color: #67ffa9;
 }
 
 .text-fuchsia {
-    color: #f672d8 !important;
+    color: #f672d8;
 }
 
 .button-float {
@@ -138,9 +165,9 @@
 }
 
 .justify-content-start {
-    -webkit-justify-content: flex-start !important;
-    -ms-flex-pack: start !important;
-    justify-content: flex-start !important;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
 }
 
 .section-two {
@@ -152,7 +179,7 @@
 .section-two-margin {
     background-color: #EBEFF9;
     margin-top: 5%;
-    text-align: justify !important;
+    text-align: justify;
 }
 
 .section-three-margin {
@@ -169,19 +196,56 @@
     background-color: #EBEFF9;
     height: 400px;
     width: 100%;
+    margin-bottom: 8vw;
 }
 
 .hidden-element {
     display: none;
 }
 
-@media (min-width: 500px) {
-    #goto_top_button {
-        margin: 30px;
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+    .button-float {
+        position: fixed;
+        height: 10vh;
+        left: 35vw;
+        top: 65vw;
+        width: 30%;
+        font-size: 22px;
+        box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
+        transition: top 10s;
+        z-index: 9999999;
+        text-align: center;
+    }
+    .section-four {
+        background-color: #EBEFF9;
+        height: 400px;
+        width: 100%;
+        margin-bottom: 8vw;
     }
 }
 
-@media only screen and (min-width: 280px) and (max-width: 655px) {
+@media only screen and (min-width: 1300px) {
+    .button-float {
+        position: fixed;
+        height: 10vh;
+        left: 60vw;
+        top: 43vw;
+        width: 30%;
+        font-size: 22px;
+        box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
+        transition: top 1s;
+        z-index: 9999999;
+        text-align: center;
+    }
+    .section-four {
+        background-color: #EBEFF9;
+        height: 400px;
+        width: 100%;
+        margin-bottom: 8vw;
+    }
+}
+
+@media only screen and (min-width: 270px) and (max-width: 655px) {
     .button-float {
         position: fixed;
         height: 32vw;
@@ -190,10 +254,90 @@
         width: 72%;
         font-size: 22px;
         box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
-        transition: top .5s;
+        transition: top 1s;
         z-index: 9999999;
         text-align: center;
         padding: 0.5em;
+    }
+    .button-margin {
+        margin-top: 0vh;
+    }
+    .text-xs {
+        font-size: 0.75rem;
+    }
+    .text-sm {
+        font-size: 0.875rem;
+    }
+    .text-md {
+        font-size: 1rem;
+    }
+    .text-lg {
+        font-size: 1.25rem;
+    }
+    .text-xl {
+        font-size: 1.5rem;
+    }
+    .overlay-text {
+        width: 85%;
+        left: 5.3vw;
+        top: -112vw;
+        background: #ffffff;
+        position: relative;
+        text-align: center;
+        height: 17%;
+        z-index: 3;
+        padding: 0px;
+        line-height: 1em;
+        border-radius: .7em;
+    }
+    .img-class {
+        height: 600px;
+        /* You must set a specified height */
+        width: 100%;
+        text-align: center;
+    }
+    .large-text {
+        font-family: "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 4.5vw;
+        text-align: center;
+        color: #1E3282;
+    }
+    .medium-text {
+        font-family: "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 3.0vw;
+        text-align: center;
+        color: #1E3282;
+    }
+    .vertical-adjust {
+        text-align: center;
+        margin-top: -1%;
+    }
+    .button-font-small {
+        font-size: 0.5em;
+        padding: 0.5em;
+    }
+    .section-two {
+        height: 1000px;
+        width: 100%;
+    }
+    .section-two-margin {
+        margin-top: 45%;
+        text-align: justify;
+    }
+    .padding-adjust {
+        padding: 0em;
+    }
+    .section-three {
+        height: 1000px;
+        width: 100%;
+    }
+    .section-four {
+        height: 1000px;
+        width: 100%;
+        background-color: #EBEFF9;
+        height: 400px;
+        width: 100%;
+        margin-bottom: 170vw;
     }
 }
 
@@ -206,58 +350,18 @@
         width: 40%;
         font-size: 22px;
         box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
-        transition: top .5s;
+        transition: top 1s;
         z-index: 9999999;
         text-align: center;
         padding: 0em;
     }
-}
-
-@media only screen and (min-width: 1200px) and (max-width: 1600px) {
-    .button-float {
-        position: fixed;
-        height: 10vh;
-        left: 35vw;
-        top: 65vw;
-        width: 30%;
-        font-size: 22px;
-        box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
-        transition: top .5s;
-        z-index: 9999999;
-        text-align: center;
+    .section-four {
+        background-color: #EBEFF9;
+        height: 400px;
+        width: 100%;
+        margin-bottom: 170vw;
     }
 }
-
-@media only screen and (min-width: 1300px) {
-    .button-float {
-        position: fixed;
-        height: 10vh;
-        left: 35vw;
-        top: 43vw;
-        width: 30%;
-        font-size: 22px;
-        box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
-        transition: top .5s;
-        z-index: 9999999;
-        text-align: center;
-    }
-}
-
-
-/* @media only screen and (min-width: 992px) and (max-width: 1200px) {
-    .button-float {
-        position: fixed;
-        height: 10vh;
-        left: 93vh;
-        top: 78vh;
-        width: 30%;
-        font-size: 22px;
-        box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
-        transition: top .5s;
-        z-index: 9999999;
-        text-align: center;
-    }
-} */
 
 @media only screen and (min-width: 765px) and (max-width: 1025px) {
     .button-float {
@@ -268,27 +372,17 @@
         width: 35%;
         font-size: 22px;
         box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
-        transition: top .5s;
+        transition: top 1s;
         z-index: 9999999;
         text-align: center;
+    }
+    .section-four {
+        background-color: #EBEFF9;
+        height: 400px;
+        width: 100%;
+        margin-bottom: 40vw;
     }
 }
-
-
-/* @media only screen and (min-width: 360px) and (device-height: 640px) {
-    .button-float {
-        position: fixed;
-        height: 50vw;
-        left: 0vw;
-        top: 0vw;
-        width: 40%;
-        font-size: 22px;
-        box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
-        transition: top .5s;
-        z-index: 9999999;
-        text-align: center;
-    }
-} */
 
 @media only screen and (min-width: 370px) and (max-width: 700px) {
     .button-float {
@@ -299,9 +393,15 @@
         width: 40%;
         font-size: 22px;
         box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
-        transition: top .5s;
+        transition: top 1s;
         z-index: 9999999;
         text-align: center;
+    }
+    .section-four {
+        background-color: #EBEFF9;
+        height: 400px;
+        width: 100%;
+        margin-bottom: 170vw;
     }
 }
 
@@ -314,9 +414,15 @@
         width: 40%;
         font-size: 22px;
         box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
-        transition: top .5s;
+        transition: top 1s;
         z-index: 9999999;
         text-align: center;
+    }
+    .section-four {
+        background-color: #EBEFF9;
+        height: 400px;
+        width: 100%;
+        margin-bottom: 170vw;
     }
 }
 
@@ -329,34 +435,14 @@
         width: 40%;
         font-size: 22px;
         box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
-        transition: top .5s;
+        transition: top 1s;
         z-index: 9999999;
         text-align: center;
+    }
+    .section-four {
+        background-color: #EBEFF9;
+        height: 400px;
+        width: 100%;
+        margin-bottom: 70vw;
     }
 }
-
-
-/*@media (max-width: @screen-xs-max) {*/
-
-
-/*Iphone 5*/
-
-
-/* @media only screen and (min-width: 320px) and (device-height: 568px) {
-    .setWidth {
-        height: 200px;
-        height: 250px;
-    }
-    .button-float {
-        position: fixed;
-        height: 50vw;
-        left: 0vw;
-        top: 60vw;
-        width: 40%;
-        font-size: 22px;
-        box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
-        transition: top .5s;
-        z-index: 9999999;
-        text-align: center;
-    }
-} */
