@@ -16,7 +16,7 @@ Seperating components and CSS files is important as single component for everyth
 ## Using a caching system 
 A caching system would help for caching the Page and load it faster on the Client side.
 
-##Depoying on Heroku
+## Depoying on Heroku
 Deployed on cloud platform heroku so that the app is available on 
 https://frozen-beach-35158.herokuapp.com/
 

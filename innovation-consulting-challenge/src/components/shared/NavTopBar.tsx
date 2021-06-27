@@ -1,6 +1,5 @@
-/* import React, { Component } from 'react'; */
-/* const Router = require("react-router-dom"); */
-/* import { Link } from 'react-router-dom'; */
+
+import logo_jpg from './../../static/images/BGVA_logo.jpg'
 
 import CallOutlinedIcon from '@material-ui/icons/CallOutlined';
 import { fade, makeStyles, Theme, createStyles } from '@material-ui/core/styles';
@@ -9,21 +8,16 @@ import IconButton from '@material-ui/core/IconButton';
 import '../../styles/css/NavTopBar.component.style.css';
 
 function NavTopBar() {
-  
+
     return (
         <div className="container-fluid">
 
             <header id="masthead" className="" role="banner">
                 <section className="page-wrap text-white tm-font-big">
                     <nav className="navbar navbar-expand-md navbar-light fixed-top bg-light">
-
-                        {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button> */}
-
                         <div>
                             <a className="navbar-brand" href="#">
-                                <img src="https://via.placeholder.com/100x50" alt="logo" title="logo_title" />
+                                <img src={logo_jpg} alt="logo" title="logo_title" />
                             </a>
                         </div>
                         <div className="collapse navbar-collapse"></div>
