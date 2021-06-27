@@ -52,7 +52,6 @@
 body>button {
     color: #fff;
     font-family: Sans-serif;
-    /* margin: 25px 25px; */
     text-align: center;
     transition: all 0.3s ease 0s;
 }
@@ -97,11 +96,9 @@ body>button {
     font-size: 2vw;
     text-align: center;
     color: #1E3282;
-    /* line-height: 1.5; */
 }
 
 .vertical-adjust {
-    /* vertical-align: 4vh; */
     text-align: center;
     margin-top: -1%;
 }
@@ -125,20 +122,6 @@ body>button {
 .text-xl {
     font-size: 2rem;
 }
-
-
-/* .button-float {
-    position: fixed;
-    height: 10vh;
-    left: 93vh;
-    top: 78vh;
-    width: 30%;
-    font-size: 22px;
-    box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
-    transition: top 1s;
-    z-index: 9999999;
-    text-align: center;
-} */
 
 .hide-me {
     top: -40px
@@ -213,7 +196,7 @@ body>button {
     background-color: #EBEFF9;
     height: 400px;
     width: 100%;
-    margin-bottom: 10vw;
+    margin-bottom: 8vw;
 }
 
 .hidden-element {
@@ -237,7 +220,7 @@ body>button {
         background-color: #EBEFF9;
         height: 400px;
         width: 100%;
-        margin-bottom: 30vw;
+        margin-bottom: 8vw;
     }
 }
 
@@ -258,7 +241,7 @@ body>button {
         background-color: #EBEFF9;
         height: 400px;
         width: 100%;
-        margin-bottom: 30vw;
+        margin-bottom: 8vw;
     }
 }
 
@@ -324,10 +307,8 @@ body>button {
         font-size: 3.0vw;
         text-align: center;
         color: #1E3282;
-        /* line-height: 1.5; */
     }
     .vertical-adjust {
-        /* vertical-align: 4vh; */
         text-align: center;
         margin-top: -1%;
     }
@@ -382,28 +363,6 @@ body>button {
     }
 }
 
-
-/* @.section-four {
-    background-color: #EBEFF9;
-    height: 400px;
-    width: 100%;
-    margin-bottom: 30vw;
-}media only screen and (min-width: 992px) and (max-width: 1200px) {
-
-    .button-float {
-        position: fixed;
-        height: 10vh;
-        left: 93vh;
-        top: 78vh;
-        width: 30%;
-        font-size: 22px;
-        box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
-        transition: top 1s;
-        z-index: 9999999;
-        text-align: center;
-    }
-} */
-
 @media only screen and (min-width: 765px) and (max-width: 1025px) {
     .button-float {
         position: fixed;
@@ -424,28 +383,6 @@ body>button {
         margin-bottom: 40vw;
     }
 }
-
-
-/* @.section-four {
-    background-color: #EBEFF9;
-    height: 400px;
-    width: 100%;
-    margin-bottom: 30vw;
-}media only screen and (min-width: 360px) and (device-height: 640px) {
-
-    .button-float {
-        position: fixed;
-        height: 50vw;
-        left: 0vw;
-        top: 0vw;
-        width: 40%;
-        font-size: 22px;
-        box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
-        transition: top 1s;
-        z-index: 9999999;
-        text-align: center;
-    }
-} */
 
 @media only screen and (min-width: 370px) and (max-width: 700px) {
     .button-float {
@@ -509,35 +446,3 @@ body>button {
         margin-bottom: 70vw;
     }
 }
-
-
-/*@media (max-width: @screen-xs-max) {*/
-
-
-/*Iphone 5*/
-
-
-/* @.section-four {
-    background-color: #EBEFF9;
-    height: 400px;
-    width: 100%;
-    margin-bottom: 30vw;
-}media only screen and (min-width: 320px) and (device-height: 568px) {
-
-    .setWidth {
-        height: 200px;
-        height: 250px;
-    }
-    .button-float {
-        position: fixed;
-        height: 50vw;
-        left: 0vw;
-        top: 60vw;
-        width: 40%;
-        font-size: 22px;
-        box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
-        transition: top 1s;
-        z-index: 9999999;
-        text-align: center;
-    }
-} */
