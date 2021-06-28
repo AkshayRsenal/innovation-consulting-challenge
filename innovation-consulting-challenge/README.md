@@ -21,6 +21,7 @@ Deployed on cloud platform heroku so that the app is available on
 https://frozen-beach-35158.herokuapp.com/
 
 ## Using media queries
+Media queries for all device screens were added for responsiveness. There is room for image optimization for every devices. Images can be also compressed in size for faster page load.
 
 
 

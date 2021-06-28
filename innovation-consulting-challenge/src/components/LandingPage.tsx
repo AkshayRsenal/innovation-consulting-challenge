@@ -13,10 +13,7 @@ function LandingPage() {
     let userHasScrolled;
 
     const setUserHasNotScrolled = () => {
-        const scrollPos = window.scrollY + window.innerHeight;
-        if (scrollPos > 1500) {
-            setAddHiddenClassName(true);
-        }
+        setAddHiddenClassName(true);
     }
 
     window.onscroll = function (e) {

@@ -280,7 +280,7 @@ body>button {
     .overlay-text {
         width: 85%;
         left: 5.3vw;
-        top: -112vw;
+        top: -132vw;
         background: #ffffff;
         position: relative;
         text-align: center;
@@ -359,7 +359,28 @@ body>button {
         background-color: #EBEFF9;
         height: 400px;
         width: 100%;
-        margin-bottom: 170vw;
+        margin-bottom: 110vw;
+    }
+    .overlay-text {
+        width: 85%;
+        left: 5.3vw;
+        top: -102vw;
+        background: #ffffff;
+        position: relative;
+        text-align: center;
+        height: 17%;
+        z-index: 3;
+        padding-top: 20px;
+        line-height: 1em;
+        border-radius: .7em;
+    }
+    .section-two-margin {
+        margin-top: 25%;
+        text-align: justify;
+    }
+    .section-three {
+        height: 800px;
+        width: 100%;
     }
 }
 
@@ -376,11 +397,23 @@ body>button {
         z-index: 9999999;
         text-align: center;
     }
+    .overlay-text {
+        width: 85%;
+        left: 5.3vw;
+        top: -16vw;
+        background: #ffffff;
+        position: relative;
+        text-align: center;
+        height: 17%;
+        z-index: 3;
+        padding-top: 20px;
+        border-radius: .7em;
+    }
     .section-four {
         background-color: #EBEFF9;
         height: 400px;
         width: 100%;
-        margin-bottom: 40vw;
+        margin-bottom: 20vw;
     }
 }
 
@@ -401,7 +434,7 @@ body>button {
         background-color: #EBEFF9;
         height: 400px;
         width: 100%;
-        margin-bottom: 170vw;
+        margin-bottom: 100vw;
     }
 }
 
@@ -422,7 +455,24 @@ body>button {
         background-color: #EBEFF9;
         height: 400px;
         width: 100%;
-        margin-bottom: 170vw;
+        margin-bottom: 100vw;
+    }
+    .overlay-text {
+        width: 85%;
+        left: 5.3vw;
+        top: -92vw;
+        background: #ffffff;
+        position: relative;
+        text-align: center;
+        height: 17%;
+        z-index: 3;
+        padding-top: 15px;
+        line-height: 1.2em;
+        border-radius: .7em;
+    }
+    .section-two-margin {
+        margin-top: 25%;
+        text-align: justify;
     }
 }
 
@@ -444,5 +494,18 @@ body>button {
         height: 400px;
         width: 100%;
         margin-bottom: 70vw;
+    }
+    .overlay-text {
+        width: 85%;
+        left: 5.3vw;
+        top: -62vw;
+        background: #ffffff;
+        position: relative;
+        text-align: center;
+        height: 17%;
+        z-index: 3;
+        padding-top: 15px;
+        line-height: 1.5em;
+        border-radius: .7em;
     }
 }

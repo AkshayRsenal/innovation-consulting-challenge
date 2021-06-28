@@ -1,1 +1,0 @@
-# innovation-consulting-challenge
