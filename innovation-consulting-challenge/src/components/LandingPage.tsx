@@ -5,38 +5,63 @@ import s3_termin_dokument from './../static/images/s3_termin_dokument.jpg'
 import rabbat_tag from './../static/images/rabbat_tag.jpg'
 import image_handy_kaputt_minus_1000 from './../static/images/image_handy_kaputt_minus_1000.jpg'
 import image_versicherung_wheelchair_10million from './../static/images/image_versicherung_wheelchair_10million.jpg'
+// import {createScrollStopListener} from "./../static/js/hooks/scrollStopListener.hooks";
+import React, { UIEventHandler, useLayoutEffect, useRef, useState } from "react";
 
-import React, { useLayoutEffect, useRef, useState } from "react";
 
 function LandingPage() {
-    const [addHiddenClassName, setAddHiddenClassName] = React.useState(false);
+    /* const [addHiddenClassName, setAddHiddenClassName] = React.useState(false);
     let userHasScrolled;
-
-    const setUserHasNotScrolled = () => {
+ */
+   /*  const setUserHasNotScrolled = () => {
         setAddHiddenClassName(true);
     }
+  */
+   
+    const handleScroll=() => {
+        const scrollDetectDiv = document.getElementById("sec-2");
+        const elementScrollPosition = scrollDetectDiv?.getBoundingClientRect().top;
 
-    window.onscroll = function (e) {
-        userHasScrolled = true
-        const scrollPos = window.scrollY + window.innerHeight;
-        if (scrollPos > 1500) {
-            setTimeout(setUserHasNotScrolled, 500);
-            if (userHasScrolled) {
+        const lastDiv = document.getElementById("last-div");
+        const lastDivScrollPosition = lastDiv?.getBoundingClientRect().top;
+
+
+        if(elementScrollPosition && elementScrollPosition < 0){
+           document.getElementById("section-middle")!.className = "section-middle calcButtonShow";
+        }
+        else {
+           document.getElementById("section-middle")!.className = "calcButtonHidden";
+        }
+        if(lastDivScrollPosition && lastDivScrollPosition < 0){
+           document.getElementById("section-middle")!.className = "calcButtonHidden";
+
+        }
+    }      
+
+    window.onscroll =  function(e){
+        handleScroll();
+    }
+
+        /* window.onscroll = function (e) {
+            userHasScrolled = true
+            const scrollPos = window.scrollY + window.innerHeight;
+            if (scrollPos > 1500) {
+                setTimeout(setUserHasNotScrolled, 500);
+                if (userHasScrolled) {
+                    setAddHiddenClassName(
+                        false
+                    );
+                } else {
+                    setAddHiddenClassName(
+                        true
+                    );
+                }
+            } else {
                 setAddHiddenClassName(
                     false
                 );
-            } else {
-                setAddHiddenClassName(
-                    true
-                );
             }
-        } else {
-            setAddHiddenClassName(
-                false
-            );
-        }
-    }
-
+        } */
     return (
         <div className="container-fluid">
             <div className="img-class">
@@ -54,7 +79,7 @@ function LandingPage() {
                     </div>
                 </div>
             </div>
-            <div className="section-two container-fluid">
+            <div className="section-two container-fluid" >
                 <div className="container-fluid row padding-adjust">
                     <div className="col-lg-8 col-md-6 col-sm-12 col-xs-12 section-two-margin padding-adjust" >
                         <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 padding-adjust">
@@ -73,7 +98,7 @@ function LandingPage() {
                     </div>
                 </div>
             </div>
-            <div className="container-fluid col-xs-12 col-sm-12 section-three section-three-margin">
+            <div className="container-fluid col-xs-12 col-sm-12 section-three section-three-margin" id="sec-2">
                 <div className="text-center col-xs-12 col-sm-12 col-md-12 col-lg-12" >
                     <span className="text-xl text-navy">Schnell. Flexibel. Sicher</span>
                 </div>
@@ -128,72 +153,76 @@ function LandingPage() {
                         <div className="s2-col-content">
                             <span>Hier schleißt Du Dinen Vertrag in nur</span>
                         </div>
-                        <div className="s2-col-content">
+                        <div className="s2-col-content" id="last-div">
                             <span>3 Minuten online ab.</span>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <div className="container-fluid d-flex justify-content-center section-four row">
-                <div className="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12 section2-col" >
+            <div className="container-fluid col-xs-12 col-sm-12 section-four">
+                <div className="text-center col-xs-12 col-sm-12 col-md-12 col-lg-12" >
                     <span className="text-xl text-navy">Kostet nicht die Welt. Aber schützt Deine</span>
                 </div>
-                <div className="row">
-                    <div className="col-lg-5 col-md-5 col-sm-5 col-xs-12 section3-col">
-                        <div className="s3-col-title">
-                            <span>Woran Du vielleicht denkst</span>
+                <div className="d-flex justify-content-center row">
+                        <div className="col-lg-5 col-md-5 col-sm-5 col-xs-12 section3-col">
+                            <div className="s3-col-title">
+                                <span>Woran Du vielleicht denkst</span>
+                            </div>
+                            <div className="s3-col-content">
+                                <span>Schneller als eine Fünf-Minuten-Termine:</span>
+                            </div>
+                            <div className="s3-col-img">
+                                <img src={image_handy_kaputt_minus_1000} alt="kleine Schäden " title="rabbat" />
+                            </div>
+                            <div className="s3-col-content">
+                                <span>Hier schleißt Du Dinen Vertrag in nur</span>
+                            </div>
+                            <div className="s3-col-content">
+                                <span>3 Minuten online ab.</span>
+                            </div>
                         </div>
-                        <div className="s3-col-content">
-                            <span>Schneller als eine Fünf-Minuten-Termine:</span>
-                        </div>
-                        <div className="s3-col-img">
-                            <img src={image_handy_kaputt_minus_1000} alt="kleine Schäden " title="rabbat" />
-                        </div>
-                        <div className="s3-col-content">
-                            <span>Hier schleißt Du Dinen Vertrag in nur</span>
-                        </div>
-                        <div className="s3-col-content">
-                            <span>3 Minuten online ab.</span>
+                        <div className="col-lg-1 col-md-1 col-sm-1  section3-col"></div>
+                        <div className="col-lg-5 col-md-5 col-sm-5 col-xs-12 section3-col">
+                            <div className="s3-col-title">
+                                <span>Woran Du vielleicht nicht denkst</span>
+                            </div>
+                            <div className="s3-col-content">
+                                <span>Schneller als eine Fünf-Minuten-Termine:</span>
+                            </div>
+                            <div className="s3-col-img">
+                                <img src={image_versicherung_wheelchair_10million} alt="große Schäden" title="rabbat" />
+                            </div>
+                            <div className="s3-col-content">
+                                <span>Hier schleißt Du Dinen Vertrag in nur</span>
+                            </div>
+                            <div className="s3-col-content">
+                                <span>3 Minuten online ab.</span>
+                            </div>
                         </div>
                     </div>
-                    <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12 section3-col"></div>
-                    <div className="col-lg-5 col-md-5 col-sm-5 col-xs-12 section3-col">
-                        <div className="s3-col-title">
-                            <span>Woran Du vielleicht nicht denkst</span>
+                    <div className="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12 section4-end container-fluid d-flex justify-content-center" >
+                        <div>
+                            <span className="text-xl text-navy">Unsere Kunden zahlen im Schnitt: </span>
                         </div>
-                        <div className="s3-col-content">
-                            <span>Schneller als eine Fünf-Minuten-Termine:</span>
-                        </div>
-                        <div className="s3-col-img">
-                            <img src={image_versicherung_wheelchair_10million} alt="große Schäden" title="rabbat" />
-                        </div>
-                        <div className="s3-col-content">
-                            <span>Hier schleißt Du Dinen Vertrag in nur</span>
-                        </div>
-                        <div className="s3-col-content">
-                            <span>3 Minuten online ab.</span>
+                        <div>
+                            <span className="text-xl text-navy">4,14 € </span>
+                            <span className="text-xl text-navy">pro Monat</span>
                         </div>
                     </div>
-                </div>
-                <div className="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12 section4-end row d-flex justify-content-center" >
-                    <div>
-
-                        <span className="text-xl text-navy">Unsere Kunden zahlen im Schnitt: </span>
-                    </div>
-                    <div>
-
-                        <span className="text-xl text-navy">4,14 € </span>
-                        <span className="text-xl text-navy">pro Monat</span>
-                    </div>
-                </div>
             </div>
-            <div>
-                {(addHiddenClassName ? (<div className={"col-lg-12 col-md-12 col-sm-12 col-xs-12 button-margin text-center"}>
+
+
+            <div  id="section-middle">
+                <button className="btn btn-success my-2 my-sm-0 button-float" >Meinen Preis Berechnen</button>
+            </div>
+
+            {/* {<div className="section-middle" id="section-middle">
+                {(addHiddenClassName ? (
                     <button className="btn btn-success my-2 my-sm-0 button-float" >Meinen Preis Berechnen</button>
-                </div>) : (<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 button-margin text-center">
+                ) : (<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 button-margin text-center">
                 </div>))}
-            </div>
+            </div>} */}
         </div>
     )
 }

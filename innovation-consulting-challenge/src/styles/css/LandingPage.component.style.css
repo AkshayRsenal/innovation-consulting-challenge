@@ -15,6 +15,24 @@
     height: 888px;
 }
 
+@keyframes stickyCalcButton-reveal {
+    0% {
+        bottom: -51px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes stickyCalcButton-disappear {
+    0% {
+        bottom: 0;
+    }
+    100% {
+        bottom: -51px;
+    }
+}
+
 .margins-top {
     margin-top: 76px;
 }
@@ -25,6 +43,7 @@
 
 .section4-end {
     margin-bottom: 3vw;
+    background-color: #ffffff;
 }
 
 .section3-col {
@@ -127,6 +146,12 @@ body>button {
     top: -40px
 }
 
+.button-float {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* section-two-margin */
 
@@ -152,10 +177,6 @@ body>button {
 
 .text-fuchsia {
     color: #f672d8;
-}
-
-.button-float {
-    margin: 1em 0em;
 }
 
 .clearfix::after {
@@ -203,50 +224,130 @@ body>button {
     display: none;
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1600px) {
-    .button-float {
-        position: fixed;
-        height: 10vh;
-        left: 35vw;
-        top: 65vw;
-        width: 30%;
-        font-size: 22px;
-        box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
-        transition: top 10s;
-        z-index: 9999999;
-        text-align: center;
-    }
-    .section-four {
-        background-color: #EBEFF9;
-        height: 400px;
-        width: 100%;
-        margin-bottom: 8vw;
-    }
+.calcButtonHidden {
+    display: none;
 }
 
-@media only screen and (min-width: 1300px) {
+.calcButtonShow {
+    display: none;
+}
+
+
+/* @media only screen and (min-width: 1200px) and (max-width: 1600px) {
     .button-float {
+        width: 100%;
         position: fixed;
-        height: 10vh;
-        left: 60vw;
-        top: 43vw;
-        width: 30%;
-        font-size: 22px;
-        box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
-        transition: top 1s;
-        z-index: 9999999;
-        text-align: center;
+        bottom: 0;
+        padding: 0px;
+        z-index: 999;
+        transition: transform .3s ease-in;
+        overflow: hidden;
+        animation-name: stickyCalcButton-reveal;
+        animation-duration: .4s;
+        background-color: hsla(0, 0%, 100%, .18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(5px);
     }
     .section-four {
         background-color: #EBEFF9;
         height: 400px;
         width: 100%;
         margin-bottom: 8vw;
+    }
+} */
+
+@media only screen and (min-width: 767px) {
+    .button-float {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .section-middle {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        padding: 0px;
+        z-index: 999;
+        transition: transform .3s ease-in;
+        overflow: hidden;
+        animation-name: stickyCalcButton-reveal;
+        animation-duration: .8s;
+        background-color: hsla(0, 0%, 100%, .18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(5px);
+        /* height: 40%; */
+    }
+    .section-four {
+        background-color: #EBEFF9;
+        height: 400px;
+        width: 100%;
+        margin-bottom: 8vw;
+    }
+    .calcButtonHidden {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: transparent;
+        position: fixed;
+        padding: 10px;
+        z-index: 999;
+        transition: transform 0.3s ease-in;
+        overflow: hidden;
+        animation-name: stickyCalcButton-disappear;
+        animation-duration: 0.8s;
+    }
+    .calcButtonShow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        /* background-color: transparent; */
+        position: fixed;
+        bottom: 0;
+        padding: 10px;
+        z-index: 999;
+        transition: transform 0.3s ease-in;
+        overflow: hidden;
+        animation-name: stickyCalcButton-reveal;
+        animation-duration: 0.4s;
+        background-color: hsla(0, 0%, 100%, .18);
+        /* left: 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 4; */
     }
 }
 
 @media only screen and (min-width: 270px) and (max-width: 655px) {
+    .section-middle {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        padding: 0px;
+        z-index: 999;
+        transition: transform .3s ease-in;
+        overflow: hidden;
+        animation-name: stickyCalcButton-reveal;
+        animation-duration: .4s;
+        background-color: hsla(0, 0%, 100%, .18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(5px);
+        /* height: 40%; */
+    }
     .button-float {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /* .button-float {
         position: fixed;
         height: 32vw;
         left: 10vw;
@@ -258,7 +359,7 @@ body>button {
         z-index: 9999999;
         text-align: center;
         padding: 0.5em;
-    }
+    } */
     .button-margin {
         margin-top: 0vh;
     }
@@ -335,18 +436,39 @@ body>button {
         height: 1000px;
         width: 100%;
         background-color: #EBEFF9;
-        height: 400px;
+        height: 900px;
         width: 100%;
-        margin-bottom: 170vw;
     }
 }
 
 @media only screen and (min-width: 350px) and (max-width: 645px) {
     .button-float {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .section-middle {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        padding: 0px;
+        z-index: 999;
+        transition: transform .3s ease-in;
+        overflow: hidden;
+        animation-name: stickyCalcButton-reveal;
+        animation-duration: .4s;
+        background-color: hsla(0, 0%, 100%, .18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(5px);
+        /* height: 40%; */
+    }
+    /* .button-float {
         position: fixed;
         height: 20vw;
         left: 30vw;
-        top: 152vw;
+        top: 122vw;
         width: 40%;
         font-size: 22px;
         box-shadow: 0px 4px 4px rgba(105, 16, 16, 0.2);
@@ -354,10 +476,10 @@ body>button {
         z-index: 9999999;
         text-align: center;
         padding: 0em;
-    }
+    } */
     .section-four {
         background-color: #EBEFF9;
-        height: 400px;
+        height: 1600px;
         width: 100%;
         margin-bottom: 110vw;
     }
@@ -385,7 +507,7 @@ body>button {
 }
 
 @media only screen and (min-width: 765px) and (max-width: 1025px) {
-    .button-float {
+    /* .button-float {
         position: fixed;
         height: 8vw;
         left: 32vw;
@@ -396,7 +518,7 @@ body>button {
         transition: top 1s;
         z-index: 9999999;
         text-align: center;
-    }
+    } */
     .overlay-text {
         width: 85%;
         left: 5.3vw;
@@ -411,14 +533,14 @@ body>button {
     }
     .section-four {
         background-color: #EBEFF9;
-        height: 400px;
+        height: 1600px;
         width: 100%;
         margin-bottom: 20vw;
     }
 }
 
 @media only screen and (min-width: 370px) and (max-width: 700px) {
-    .button-float {
+    /* .button-float {
         position: fixed;
         height: 20vw;
         left: 30vw;
@@ -429,17 +551,17 @@ body>button {
         transition: top 1s;
         z-index: 9999999;
         text-align: center;
-    }
+    } */
     .section-four {
         background-color: #EBEFF9;
-        height: 400px;
+        height: 1600px;
         width: 100%;
         margin-bottom: 100vw;
     }
 }
 
 @media only screen and (min-width: 410px) and (max-width: 750px) {
-    .button-float {
+    /* .button-float {
         position: fixed;
         height: 20vw;
         left: 30vw;
@@ -450,10 +572,10 @@ body>button {
         transition: top 1s;
         z-index: 9999999;
         text-align: center;
-    }
+    } */
     .section-four {
         background-color: #EBEFF9;
-        height: 400px;
+        height: 1600px;
         width: 100%;
         margin-bottom: 100vw;
     }
@@ -477,7 +599,7 @@ body>button {
 }
 
 @media only screen and (min-width: 530px) and (max-width: 750px) {
-    .button-float {
+    /*     .button-float {
         position: fixed;
         height: 15vw;
         left: 30vw;
@@ -488,10 +610,10 @@ body>button {
         transition: top 1s;
         z-index: 9999999;
         text-align: center;
-    }
+    } */
     .section-four {
         background-color: #EBEFF9;
-        height: 400px;
+        height: 1600px;
         width: 100%;
         margin-bottom: 70vw;
     }
