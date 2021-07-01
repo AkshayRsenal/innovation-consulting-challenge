@@ -146,11 +146,12 @@ body>button {
     top: -40px
 }
 
-.button-float {
+
+/* .button-float {
     display: none;
     align-items: center;
     justify-content: center;
-}
+} */
 
 
 /* section-two-margin */
@@ -232,9 +233,8 @@ body>button {
     display: none;
 }
 
-
-/* @media only screen and (min-width: 1200px) and (max-width: 1600px) {
-    .button-float {
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+    /* .button-float {
         width: 100%;
         position: fixed;
         bottom: 0;
@@ -255,10 +255,13 @@ body>button {
         height: 400px;
         width: 100%;
         margin-bottom: 8vw;
+    } */
+    .button-float {
+        display: none;
     }
-} */
+}
 
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 270px) and (max-width: 740px) {
     .button-float {
         display: flex;
         align-items: center;
@@ -280,12 +283,6 @@ body>button {
         justify-content: center;
         transform: translateY(5px);
         /* height: 40%; */
-    }
-    .section-four {
-        background-color: #EBEFF9;
-        height: 400px;
-        width: 100%;
-        margin-bottom: 8vw;
     }
     .calcButtonHidden {
         display: flex;
@@ -436,7 +433,7 @@ body>button {
         height: 1000px;
         width: 100%;
         background-color: #EBEFF9;
-        height: 900px;
+        height: 400vw;
         width: 100%;
     }
 }
@@ -479,9 +476,8 @@ body>button {
     } */
     .section-four {
         background-color: #EBEFF9;
-        height: 1600px;
+        height: 200vw;
         width: 100%;
-        margin-bottom: 110vw;
     }
     .overlay-text {
         width: 85%;
@@ -533,9 +529,8 @@ body>button {
     }
     .section-four {
         background-color: #EBEFF9;
-        height: 1600px;
+        height: 200vw;
         width: 100%;
-        margin-bottom: 20vw;
     }
 }
 
@@ -554,9 +549,8 @@ body>button {
     } */
     .section-four {
         background-color: #EBEFF9;
-        height: 1600px;
+        height: 200vw;
         width: 100%;
-        margin-bottom: 100vw;
     }
 }
 
@@ -575,9 +569,8 @@ body>button {
     } */
     .section-four {
         background-color: #EBEFF9;
-        height: 1600px;
+        height: 200vw;
         width: 100%;
-        margin-bottom: 100vw;
     }
     .overlay-text {
         width: 85%;
@@ -613,9 +606,8 @@ body>button {
     } */
     .section-four {
         background-color: #EBEFF9;
-        height: 1600px;
+        height: 120vw;
         width: 100%;
-        margin-bottom: 70vw;
     }
     .overlay-text {
         width: 85%;

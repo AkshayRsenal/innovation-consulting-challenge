@@ -13,57 +13,67 @@ function LandingPage() {
     /* const [addHiddenClassName, setAddHiddenClassName] = React.useState(false);
     let userHasScrolled;
  */
-   /*  const setUserHasNotScrolled = () => {
-        setAddHiddenClassName(true);
-    }
-  */
-   
-    const handleScroll=() => {
+    /*  const setUserHasNotScrolled = () => {
+         setAddHiddenClassName(true);
+     }
+   */
+
+    const handleScroll = () => {
         const scrollDetectDiv = document.getElementById("sec-2");
         const elementScrollPosition = scrollDetectDiv?.getBoundingClientRect().top;
 
         const lastDiv = document.getElementById("last-div");
         const lastDivScrollPosition = lastDiv?.getBoundingClientRect().top;
 
+        const heroImage = document.getElementById("hero-image");
+        const heroImageScrollPosition = heroImage?.getBoundingClientRect().top;
 
-        if(elementScrollPosition && elementScrollPosition < 0){
-           document.getElementById("section-middle")!.className = "section-middle calcButtonShow";
+        if (elementScrollPosition && elementScrollPosition < 0) {
+            document.getElementById("section-middle")!.className = "section-middle calcButtonShow";
         }
         else {
-           document.getElementById("section-middle")!.className = "calcButtonHidden";
+            document.getElementById("section-middle")!.className = "calcButtonHidden";
         }
-        if(lastDivScrollPosition && lastDivScrollPosition < 0){
-           document.getElementById("section-middle")!.className = "calcButtonHidden";
-
+        if (lastDivScrollPosition && lastDivScrollPosition < -70) {
+            document.getElementById("section-middle")!.className = "calcButtonHidden";
+        } else {
+            document.getElementById("section-middle")!.className = "section-middle calcButtonShow";
         }
-    }      
 
-    window.onscroll =  function(e){
+
+        if (heroImageScrollPosition && heroImageScrollPosition > 0) {
+            document.getElementById("section-middle")!.className = "calcButtonHidden";
+        } 
+
+        console.log(heroImageScrollPosition + "firstDiv:" + elementScrollPosition)
+    }
+
+    window.onscroll = function (e) {
         handleScroll();
     }
 
-        /* window.onscroll = function (e) {
-            userHasScrolled = true
-            const scrollPos = window.scrollY + window.innerHeight;
-            if (scrollPos > 1500) {
-                setTimeout(setUserHasNotScrolled, 500);
-                if (userHasScrolled) {
-                    setAddHiddenClassName(
-                        false
-                    );
-                } else {
-                    setAddHiddenClassName(
-                        true
-                    );
-                }
-            } else {
+    /* window.onscroll = function (e) {
+        userHasScrolled = true
+        const scrollPos = window.scrollY + window.innerHeight;
+        if (scrollPos > 1500) {
+            setTimeout(setUserHasNotScrolled, 500);
+            if (userHasScrolled) {
                 setAddHiddenClassName(
                     false
                 );
+            } else {
+                setAddHiddenClassName(
+                    true
+                );
             }
-        } */
+        } else {
+            setAddHiddenClassName(
+                false
+            );
+        }
+    } */
     return (
-        <div className="container-fluid">
+        <div className="container-fluid" >
             <div className="img-class">
                 <div className="container-fluid setWidth" >
                 </div>
@@ -74,7 +84,7 @@ function LandingPage() {
                     <div className="vertical-adjust">
                         <span className="medium-text">Unbeschwert das Leben genießen</span>
                     </div>
-                    <div className="col-md-12 col-xs-12 col-lg-12  button-margin button-font-small">
+                    <div className="col-md-12 col-xs-12 col-lg-12  button-margin button-font-small" id="hero-image">
                         <button className="btn btn-success button-element" >Meinen Preis Berechnen</button>
                     </div>
                 </div>
@@ -165,55 +175,55 @@ function LandingPage() {
                     <span className="text-xl text-navy">Kostet nicht die Welt. Aber schützt Deine</span>
                 </div>
                 <div className="d-flex justify-content-center row">
-                        <div className="col-lg-5 col-md-5 col-sm-5 col-xs-12 section3-col">
-                            <div className="s3-col-title">
-                                <span>Woran Du vielleicht denkst</span>
-                            </div>
-                            <div className="s3-col-content">
-                                <span>Schneller als eine Fünf-Minuten-Termine:</span>
-                            </div>
-                            <div className="s3-col-img">
-                                <img src={image_handy_kaputt_minus_1000} alt="kleine Schäden " title="rabbat" />
-                            </div>
-                            <div className="s3-col-content">
-                                <span>Hier schleißt Du Dinen Vertrag in nur</span>
-                            </div>
-                            <div className="s3-col-content">
-                                <span>3 Minuten online ab.</span>
-                            </div>
+                    <div className="col-lg-5 col-md-5 col-sm-5 col-xs-12 section3-col">
+                        <div className="s3-col-title">
+                            <span>Woran Du vielleicht denkst</span>
                         </div>
-                        <div className="col-lg-1 col-md-1 col-sm-1  section3-col"></div>
-                        <div className="col-lg-5 col-md-5 col-sm-5 col-xs-12 section3-col">
-                            <div className="s3-col-title">
-                                <span>Woran Du vielleicht nicht denkst</span>
-                            </div>
-                            <div className="s3-col-content">
-                                <span>Schneller als eine Fünf-Minuten-Termine:</span>
-                            </div>
-                            <div className="s3-col-img">
-                                <img src={image_versicherung_wheelchair_10million} alt="große Schäden" title="rabbat" />
-                            </div>
-                            <div className="s3-col-content">
-                                <span>Hier schleißt Du Dinen Vertrag in nur</span>
-                            </div>
-                            <div className="s3-col-content">
-                                <span>3 Minuten online ab.</span>
-                            </div>
+                        <div className="s3-col-content">
+                            <span>Schneller als eine Fünf-Minuten-Termine:</span>
+                        </div>
+                        <div className="s3-col-img">
+                            <img src={image_handy_kaputt_minus_1000} alt="kleine Schäden " title="rabbat" />
+                        </div>
+                        <div className="s3-col-content">
+                            <span>Hier schleißt Du Dinen Vertrag in nur</span>
+                        </div>
+                        <div className="s3-col-content">
+                            <span>3 Minuten online ab.</span>
                         </div>
                     </div>
-                    <div className="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12 section4-end container-fluid d-flex justify-content-center" >
-                        <div>
-                            <span className="text-xl text-navy">Unsere Kunden zahlen im Schnitt: </span>
+                    <div className="col-lg-1 col-md-1 col-sm-1  section3-col"></div>
+                    <div className="col-lg-5 col-md-5 col-sm-5 col-xs-12 section3-col">
+                        <div className="s3-col-title">
+                            <span>Woran Du vielleicht nicht denkst</span>
                         </div>
-                        <div>
-                            <span className="text-xl text-navy">4,14 € </span>
-                            <span className="text-xl text-navy">pro Monat</span>
+                        <div className="s3-col-content">
+                            <span>Schneller als eine Fünf-Minuten-Termine:</span>
+                        </div>
+                        <div className="s3-col-img">
+                            <img src={image_versicherung_wheelchair_10million} alt="große Schäden" title="rabbat" />
+                        </div>
+                        <div className="s3-col-content">
+                            <span>Hier schleißt Du Dinen Vertrag in nur</span>
+                        </div>
+                        <div className="s3-col-content">
+                            <span>3 Minuten online ab.</span>
                         </div>
                     </div>
+                </div>
+                <div className="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12 section4-end container-fluid d-flex justify-content-center" >
+                    <div>
+                        <span className="text-xl text-navy">Unsere Kunden zahlen im Schnitt: </span>
+                    </div>
+                    <div>
+                        <span className="text-xl text-navy">4,14 € </span>
+                        <span className="text-xl text-navy">pro Monat</span>
+                    </div>
+                </div>
             </div>
 
 
-            <div  id="section-middle">
+            <div id="section-middle">
                 <button className="btn btn-success my-2 my-sm-0 button-float" >Meinen Preis Berechnen</button>
             </div>
 
