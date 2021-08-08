@@ -9,7 +9,6 @@ As TypeScript was a mandatory requirement this command provided a React Typescri
 
 Taking less time for setting up and giving more time to development was the aim here. But using a bolier plate has its own disadvantages like adding files to a codebase that might never be used, especially when creating a single Landing Page.
 
-
 ## Dividing components and CSS files
 Seperating components and CSS files is important as single component for everything would leave the 
 
