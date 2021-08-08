@@ -1,22 +1,15 @@
+import React from "react";
 import '../styles/css/LandingPage.component.style.css';
-import s2_laptop_kaputt from './../static/images/s2_laptop_kaputt.jpg'
-import s3_clock from './../static/images/s3_clock.jpg'
-import s3_termin_dokument from './../static/images/s3_termin_dokument.jpg'
-import rabbat_tag from './../static/images/rabbat_tag.jpg'
-import image_handy_kaputt_minus_1000 from './../static/images/image_handy_kaputt_minus_1000.jpg'
-import image_versicherung_wheelchair_10million from './../static/images/image_versicherung_wheelchair_10million.jpg'
-// import {createScrollStopListener} from "./../static/js/hooks/scrollStopListener.hooks";
-import React, { UIEventHandler, useLayoutEffect, useRef, useState } from "react";
+import image_handy_kaputt_minus_1000 from './../static/images/image_handy_kaputt_minus_1000.jpg';
+import image_versicherung_wheelchair_10million from './../static/images/image_versicherung_wheelchair_10million.jpg';
+import rabbat_tag from './../static/images/rabbat_tag.jpg';
+import s2_laptop_kaputt from './../static/images/s2_laptop_kaputt.jpg';
+import s3_clock from './../static/images/s3_clock.jpg';
+import s3_termin_dokument from './../static/images/s3_termin_dokument.jpg';
 
 
 function LandingPage() {
-    /* const [addHiddenClassName, setAddHiddenClassName] = React.useState(false);
-    let userHasScrolled;
- */
-    /*  const setUserHasNotScrolled = () => {
-         setAddHiddenClassName(true);
-     }
-   */
+
 
     const handleScroll = () => {
         const scrollDetectDiv = document.getElementById("sec-2");
@@ -45,35 +38,15 @@ function LandingPage() {
             document.getElementById("section-middle")!.className = "calcButtonHidden";
         } 
 
-        console.log(heroImageScrollPosition + "firstDiv:" + elementScrollPosition)
+        // console.log(heroImageScrollPosition + "firstDiv:" + elementScrollPosition)
     }
 
     window.onscroll = function (e) {
         handleScroll();
     }
 
-    /* window.onscroll = function (e) {
-        userHasScrolled = true
-        const scrollPos = window.scrollY + window.innerHeight;
-        if (scrollPos > 1500) {
-            setTimeout(setUserHasNotScrolled, 500);
-            if (userHasScrolled) {
-                setAddHiddenClassName(
-                    false
-                );
-            } else {
-                setAddHiddenClassName(
-                    true
-                );
-            }
-        } else {
-            setAddHiddenClassName(
-                false
-            );
-        }
-    } */
     return (
-        <div className="container-fluid" >
+        <div>
             <div className="img-class">
                 <div className="container-fluid setWidth" >
                 </div>
@@ -90,7 +63,7 @@ function LandingPage() {
                 </div>
             </div>
             <div className="section-two container-fluid" >
-                <div className="container-fluid row padding-adjust">
+                <div className="row margin-edges">
                     <div className="col-lg-8 col-md-6 col-sm-12 col-xs-12 section-two-margin padding-adjust" >
                         <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 padding-adjust">
                         </div>
@@ -226,13 +199,6 @@ function LandingPage() {
             <div id="section-middle">
                 <button className="btn btn-success my-2 my-sm-0 button-float" >Meinen Preis Berechnen</button>
             </div>
-
-            {/* {<div className="section-middle" id="section-middle">
-                {(addHiddenClassName ? (
-                    <button className="btn btn-success my-2 my-sm-0 button-float" >Meinen Preis Berechnen</button>
-                ) : (<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 button-margin text-center">
-                </div>))}
-            </div>} */}
         </div>
     )
 }

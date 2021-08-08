@@ -1,10 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import NavTopBar from './components/shared/NavTopBar';
 // const Router = require("react-router-dom");
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import './App.css';
 import LandingPage from './components/LandingPage';
+import NavTopBar from './components/shared/NavTopBar';
 
 function App() {
   return (
