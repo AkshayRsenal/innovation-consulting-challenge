@@ -3,8 +3,6 @@ import IconButton from '@material-ui/core/IconButton';
 import CallOutlinedIcon from '@material-ui/icons/CallOutlined';
 import '../../styles/css/NavTopBar.component.style.css';
 
-
-
 function NavTopBar() {
 
     return (
