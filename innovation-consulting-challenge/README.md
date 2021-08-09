@@ -21,5 +21,3 @@ https://landing-run.herokuapp.com/
 
 ## Using media queries
 Media queries for all device screens were added for responsiveness. There is room for image optimization for all devices. Images can be also compressed in size for faster page load.
-
-
